@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Video {
+  id        String           @id @default(uuid())
+  title     String
+  describe  String
+  url       String
+
+  comments  Comment[]
+  createdAt DateTime         @default(now())
+  @@map("videos")
+}
+
+model Comment {
+  id       String @id @default(uuid())
+  text     String
+
+  video   Video  @relation(fields: [videoId], references: [id])
+  videoId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@map("comment")
+}
