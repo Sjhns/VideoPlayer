@@ -123,10 +123,9 @@ main {
 .container-video-comments .box-video .bar {
   display: flex;
   align-items: center;
-  padding: 1.5rem 2rem 1.6rem;
+  padding: 1.5rem 2rem 0;
   -moz-column-gap: 4rem;
        column-gap: 4rem;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.377);
 }
 .container-video-comments .box-video .bar i {
   font-size: 2rem !important;
@@ -144,7 +143,7 @@ main {
 }
 .container-video-comments .box-video .describe {
   border-bottom: 1px solid rgba(128, 128, 128, 0.377);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   padding-bottom: 0.5rem;
 }
 .container-video-comments .box-video .describe h2 {
@@ -179,6 +178,8 @@ main {
   border-radius: 50%;
   width: 4.2rem;
   height: 4.2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container-video-comments .box-video .channel div {
   display: flex;
@@ -215,15 +216,45 @@ main {
 }
 
 .container-recommended {
-  border: 1px solid white;
   width: 25%;
   height: 100%;
+  margin-left: 2rem;
+}
+.container-recommended h2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.container-recommended .tags {
+  margin-bottom: 1rem;
+}
+.container-recommended .item {
+  width: 100%;
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container-recommended .item h3 {
+  width: 100%;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container-recommended .item img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 9rem;
+  border-radius: 0.5rem;
 }
 
 .container-video-comments .box-comments {
-  margin-top: 1.5rem;
+  margin-top: 4rem;
   margin-bottom: 50rem;
-  border: 1px solid red;
 }
 .container-video-comments .box-comments .title {
   display: flex;
@@ -232,5 +263,124 @@ main {
 }
 .container-video-comments .box-comments .title h3 {
   font-size: 1.6rem;
+  font-weight: 500;
+}
+.container-video-comments .box-comments .title .buttons {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.container-video-comments .box-comments .title .buttons span {
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #c7c7c7;
+}
+.container-video-comments .box-comments .title .buttons span:hover {
+  text-decoration: underline;
+  color: #e0e0e0;
+}
+.container-video-comments .box-comments .box-user-coment {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  -moz-column-gap: 1.3rem;
+       column-gap: 1.3rem;
+}
+.container-video-comments .box-comments .box-user-coment img {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-video-comments .box-comments .box-user-coment .input {
+  width: 100%;
+}
+.container-video-comments .box-comments .box-user-coment .input textarea {
+  padding: 0.7rem 1.4rem 0;
+  width: 100%;
+  height: 7rem;
+  outline: none;
+  border: none;
+  background: rgba(44, 44, 44, 0.5803921569);
+  color: #cfcfcf;
+  font-size: 1.5rem;
+}
+.container-video-comments .box-comments .box-user-coment .input button {
+  cursor: pointer;
+  font-size: 1.4rem;
+  text-transform: capitalize;
   font-weight: 400;
+  margin-left: auto;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #b9b8b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.container-video-comments .box-comments .box-user-coment .input button:hover {
+  color: #c7c7c7;
+}
+.container-video-comments .box-comments .container-show-coment {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.container-video-comments .box-comments .container-show-coment .item {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  align-items: flex-start;
+}
+.container-video-comments .box-comments .container-show-coment .item img {
+  margin-top: 0.5rem;
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-video-comments .box-comments .container-show-coment .item h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.container-video-comments .box-comments .container-show-coment .item p {
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+.container-video-comments .box-comments .container-show-coment .item .bottoes {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  margin-top: 1rem;
+  color: #b9b8b8;
+}
+.container-video-comments .box-comments .container-show-coment .item .bottoes span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container-video-comments .box-comments .container-show-coment .item .bottoes span:hover {
+  color: #cacaca;
+}
+.container-video-comments .box-comments .container-show-coment .item .bottoes i {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.container-video-comments .box-comments .container-show-coment .item .bottoes i:hover {
+  color: #cacaca;
 }/*# sourceMappingURL=style.css.map */
