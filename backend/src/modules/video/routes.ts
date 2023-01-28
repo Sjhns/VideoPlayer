@@ -17,6 +17,25 @@ videoRoute.post("/api/v1/video", async (req: Request, res: Response) => {
   res.status(201).json(videoCreated);
 });
 
+videoRoute.get("/api/v1/video", async (req: Request, res: Response) => {
+
+  const video = await prismaClient.video.findMany({
+    include: {
+      comments: {
+        select: {
+          id: true,
+          text: true,
+          createdAt: true,
+          updatedAt: true,
+
+          },
+        },
+      }
+    });
+
+  res.status(200).json(video);
+});
+
 videoRoute.get("/api/v1/video/:id", async (req: Request, res: Response) => {
   const { id } = req.params
  
@@ -27,6 +46,7 @@ videoRoute.get("/api/v1/video/:id", async (req: Request, res: Response) => {
     include: {
       comments: {
         select: {
+          id: true,
           text: true,
           createdAt: true,
           updatedAt: true,

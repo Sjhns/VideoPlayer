@@ -6,7 +6,7 @@ export const BoxVideo = () => {
       {/*  <video class="sopplayer" data-setup="{}"  controls>
                     <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
                 </video> */}
-      <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+      <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" controls></video>
 
       <S.Bar>
         <div>
