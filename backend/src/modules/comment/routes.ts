@@ -1,31 +1,9 @@
-import { Request, Response, Router } from "express";
-import { prismaClient } from "../../database/client-prisma";
+import { Router } from "express";
+import { CreateController } from "./controller/create-controller";
+import { DeleteController } from "./controller/delete-controller";
 
 export const commentRoute = Router();
 
-commentRoute.post("/api/v1/video/comment", async (req: Request, res: Response) => {
-  const { text, videoId } = req.body;
+commentRoute.post("/api/v1/video/comment", CreateController.handle);
 
-  const newComment = await prismaClient.comment.create({
-    data: {
-      text: text,
-      videoId: videoId,
-    },
-  });
-
-  res.status(201).json(newComment);
-});
-
-commentRoute.delete("/api/v1/video/comment/:id", async (req: Request, res: Response) => {
-  const { id } = req.params
-
-  const Comment = await prismaClient.comment.delete({
-    where:{
-      id: id
-    }
-  });
-
-  res.status(201).json(Comment);
-});
-
-
+commentRoute.delete("/api/v1/video/comment/:id", DeleteController.handle);
