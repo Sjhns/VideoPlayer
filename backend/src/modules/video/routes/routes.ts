@@ -1,7 +1,7 @@
 import { Request, Response, Router } from "express";
-import { prismaClient } from "../../database/client-prisma";
-import { CreateController } from "./controller/create-controller";
-import { GetController } from "./controller/get-controller";
+import { prismaClient } from "../../../database/client-prisma";
+import { CreateController } from "../controller/create-controller";
+import { GetController } from "../controller/get-controller";
 
 export const videoRoute = Router();
 

@@ -1,6 +1,6 @@
 import express from "express";
-import { commentRoute } from "modules/comment/routes";
-import { videoRoute } from "modules/video/routes";
+import { commentRoute } from "modules/comment/routes/routes";
+import { videoRoute } from "modules/video/routes/routes";
 import cors from 'cors';
 
 const server = express();

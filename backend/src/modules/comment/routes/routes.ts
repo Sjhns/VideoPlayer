@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { CreateController } from "./controller/create-controller";
-import { DeleteController } from "./controller/delete-controller";
+import { CreateController } from "../controller/create-controller";
+import { DeleteController } from "../controller/delete-controller";
 
 export const commentRoute = Router();
 
