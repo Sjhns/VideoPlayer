@@ -7,7 +7,7 @@ export class CreateController {
     const commentCreated = await prismaClient.comment.create({
       data: {
         text: text,
-        videoId: videoId,
+        videoId: parseInt(videoId),
       },
     });
 

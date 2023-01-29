@@ -6,7 +6,7 @@ export class DeleteController {
 
     const commentDeleted = await prismaClient.comment.delete({
       where: {
-        id: id,
+        id: parseInt(id),
       },
     });
 
