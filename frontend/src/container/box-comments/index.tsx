@@ -1,35 +1,17 @@
 import * as S from "./style";
 import { useEffect, useState } from "react";
+import {TypeComments, TypeResponse }from "./types"
 
-interface TypeResponse {
-  id: string;
-  title: string;
-  describe: string;
-  url: string;
-  createdAt: string;
-  comments: [
-    {
-      text: string;
-      createdAt: string;
-      updatedAt: string;
-    }
-  ];
-
-}
-interface TypeComments {
-  text: string;
-  createdAt: string;
-  updatedAt: string;
-}
+const bannedWords = ["lixo", "merda", "idiota"];
 
 export const BoxComments = () => {
-  const [inputValue, setInputValue] = useState("");
   const baseUrl = "http://localhost:4000/api/v1";
+
+  const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState<TypeComments[]>([]);
   const [update, setUpdate] = useState(false);
   const [error, setError] = useState("");
 
-  const bannedWords = ["lixo", "merda", "morra"];
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputValue(e.target.value);
@@ -37,8 +19,8 @@ export const BoxComments = () => {
   };
 
   const handleSubmit = async () => {
-    const regex = new RegExp(bannedWords.join("|"), "i");
 
+    const regex = new RegExp(bannedWords.join("|"), "i");
     if (regex.test(inputValue)) {
       setError("Palavra imprópria encontrada. Por favor, revise o texto.");
       return;
@@ -73,7 +55,7 @@ export const BoxComments = () => {
   return (
     <S.Container>
       <S.BoxTitle>
-        <h3>Comments</h3>
+        <h3>Comentários</h3>
 
         <S.GroupButtons>
           <span>Best</span>

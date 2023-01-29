@@ -6,8 +6,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   video {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     display: flex;
     flex-direction: column;
   }
@@ -33,6 +33,10 @@ export const Bar = styled.div`
       margin-left: auto;
     }
   }
+
+  @media (max-width: 440px) {
+    padding: 1.5rem 1rem 0;
+}
 `;
 
 export const Describe = styled.div`
@@ -62,12 +66,17 @@ export const Describe = styled.div`
       color: rgb(155, 155, 155);
     }
   }
+
+  @media (max-width: 578px) {
+    padding-left: 1rem;
+  }
 `;
 
 export const Channel = styled.div`
   margin-top: 2rem;
   display: flex;
   align-items: center;
+
   column-gap: 0.9rem;
 
   border-bottom: 1px solid rgba(128, 128, 128, 0.377);
@@ -86,6 +95,10 @@ export const Channel = styled.div`
       text-transform: capitalize;
     }
   }
+
+  @media (max-width: 578px) {
+    padding-left: 1rem;
+  }
 `;
 
 export const ChannelPhoto = styled.img`
@@ -100,7 +113,7 @@ export const ChannelStats = styled.div`
   font-size: 1rem;
   color: #b9b8b8;
   text-transform: capitalize;
-
+  white-space: nowrap;
   .ponto {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -123,5 +136,9 @@ export const Button = styled.button`
 
   &:hover {
     background: rgba(108, 12, 187, 0.795);
+  }
+
+  @media (max-width: 357px) {
+    margin-left: 2rem;
   }
 `;

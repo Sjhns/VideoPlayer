@@ -6,12 +6,17 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 440px) {
+    padding: 1.5rem 1rem 0;
+}
 `;
 
 export const ContainerLogo = styled.div`
   display: flex;
   align-items: center;
   column-gap: 2rem;
+  cursor: pointer;
 
   i {
     font-size: 2.5rem;
@@ -47,6 +52,12 @@ export const BoxSearch = styled.div`
     font-size: 2.5rem;
     color: rgba(173, 171, 171, 0.699);
   }
+
+  @media (max-width: 815px) {
+    display: none;
+    
+}
+  
 `;
 
 export const BoxOptions = styled.div`
@@ -74,6 +85,11 @@ export const BoxOptions = styled.div`
       border: 1px solid rgba(51, 72, 177, 0.486);
       color: rgb(102, 102, 231);
     }
+
+    @media (max-width: 440px) {
+    display: none;
+    
+}
   }
 
   button {
@@ -91,5 +107,12 @@ export const BoxOptions = styled.div`
     &:hover {
       background: rgba(108, 12, 187, 0.795);
     }
+
+    @media (max-width: 815px) {
+    display: none;
+    
+}
   }
+
+ 
 `;

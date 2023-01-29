@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   margin-top: 4rem;
-  margin-bottom: 50rem;
+  margin-bottom: 5rem;
+
+
+  @media (max-width: 578px) {
+    padding: 0  1rem;
+    
+}
 `;
 
 export const BoxTitle = styled.div`
@@ -59,13 +65,14 @@ export const Input = styled.div`
   textarea {
     padding: 0.7rem 1.4rem 0;
     width: 100%;
-    height: 7rem;
+    height: 9rem;
     outline: none;
     border: none;
     background: #2c2c2c94;
     color: #cfcfcf;
 
     font-size: 1.5rem;
+
   }
 
   button {

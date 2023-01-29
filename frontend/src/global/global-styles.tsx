@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #181a20;
     color: #ffffff;
+    min-width: 320px;
   }
 `;
 

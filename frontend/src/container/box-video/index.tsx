@@ -1,12 +1,17 @@
 import * as S from "./style";
 
 export const BoxVideo = () => {
+  const handleLinkedin = () => {
+    window.open("https://www.linkedin.com/in/simeone-johnson/");
+  };
+
   return (
     <S.Container>
-      {/*  <video class="sopplayer" data-setup="{}"  controls>
-                    <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
-                </video> */}
-      <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" controls></video>
+      <video 
+      poster="./poster.png"
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        controls
+      ></video>
 
       <S.Bar>
         <div>
@@ -24,7 +29,7 @@ export const BoxVideo = () => {
       </S.Bar>
 
       <S.Describe>
-        <h2>Um dia depois de bababa</h2>
+        <h2>Big Buck Bunny</h2>
         <div>
           <span>958.7K</span>
           <span className="dot">•</span>
@@ -47,7 +52,7 @@ export const BoxVideo = () => {
             </S.ChannelStats>
           </h2>
 
-          <S.Button>Follow</S.Button>
+          <S.Button onClick={handleLinkedin}>Follow</S.Button>
         </div>
       </S.Channel>
     </S.Container>

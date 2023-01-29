@@ -4,7 +4,7 @@ export const ListRecommended = () => {
   const Array = [1, 2, 3, 4, 5, 6, 74, 854, 742, 475, 2586, 1455];
   return (
     <S.Container>
-      <h2>Recomendado para você</h2>
+      <h2>Recomendações para você</h2>
       <S.GroupTags>
         <span>Tudo</span>
         <span>Populares</span>

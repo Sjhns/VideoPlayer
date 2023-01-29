@@ -8,9 +8,15 @@ export const Container = styled.div`
 
   h2 {
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 897px) {
+    display: none;
+    
+}
+  
 `;
 
 export const GroupTags = styled.div`

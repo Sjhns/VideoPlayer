@@ -7,12 +7,12 @@ export const Header = () => {
         <i className="bx bx-menu"></i>
       </S.ContainerLogo>
       <S.BoxSearch>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="O que você quer hoje?" />
         <i className="bx bx-search"></i>
       </S.BoxSearch>
       <S.BoxOptions>
         <span>
-          <i className="bx bxs-video-plus"></i> Create
+          <i className="bx bxs-video-plus"></i> Criar
         </span>
         <i className="bx bx-time-five"></i>
         <i className="bx bx-bookmark-plus"></i>
