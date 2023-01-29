@@ -3,12 +3,14 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+  
+  relationMode = "prisma"
 }
 
 model Video {
-  id       String @id @default(uuid())
+  id       Int    @id @default(autoincrement())
   title    String
   describe String
   url      String
@@ -20,11 +22,11 @@ model Video {
 }
 
 model Comment {
-  id   String @id @default(uuid())
+  id   Int    @id @default(autoincrement())
   text String
 
   video     Video    @relation(fields: [videoId], references: [id])
-  videoId   String
+  videoId   Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
