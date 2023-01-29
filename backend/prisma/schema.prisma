@@ -31,4 +31,5 @@ model Comment {
   updatedAt DateTime @updatedAt
 
   @@map("comment")
+  @@index([videoId])
 }
