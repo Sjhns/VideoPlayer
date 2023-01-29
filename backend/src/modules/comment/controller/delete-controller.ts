@@ -1,11 +1,15 @@
 import { Request, Response } from "express";
-import DeleteService from "../use-case/delete-service";
-
+import { prismaClient } from "../../../database/client-prisma";
 export class DeleteController {
   static async handle(req: Request, res: Response) {
-    const { id } = req.params
-    const result = DeleteService.handle(id);
+    const { id } = req.params;
 
-    res.status(200).json(result);
+    const commentDeleted = await prismaClient.comment.delete({
+      where: {
+        id: id,
+      },
+    });
+
+    res.status(200).json(commentDeleted);
   }
 }

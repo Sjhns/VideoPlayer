@@ -1,12 +1,16 @@
 import { Request, Response } from "express";
-import CreateService from "../use-case/create-service";
-
+import { prismaClient } from "../../../database/client-prisma";
 export class CreateController {
   static async handle(req: Request, res: Response) {
     const { text, videoId } = req.body;
 
-    const result = CreateService.handle(text, videoId);
+    const commentCreated = await prismaClient.comment.create({
+      data: {
+        text: text,
+        videoId: videoId,
+      },
+    });
 
-    res.status(201).json(result);
+    res.status(201).json(commentCreated);
   }
 }
