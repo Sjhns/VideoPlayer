@@ -14,12 +14,12 @@ interface TypeResponse {
       updatedAt: string;
     }
   ];
-}
 
-interface TypeComments{
-    text: string;
-    createdAt: string;
-    updatedAt: string;
+}
+interface TypeComments {
+  text: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export const BoxComments = () => {
@@ -27,56 +27,48 @@ export const BoxComments = () => {
   const baseUrl = "http://localhost:4000/api/v1";
   const [data, setData] = useState<TypeComments[]>([]);
   const [update, setUpdate] = useState(false);
-  const [error, setError] = useState('');
-  const bannedWords = ['lixo', 'merda', 'morra'];
+  const [error, setError] = useState("");
+
+  const bannedWords = ["lixo", "merda", "morra"];
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const formated = e.target.value
-    setInputValue(formated);
+    setInputValue(e.target.value);
     setError("");
-};
+  };
 
   const handleSubmit = async () => {
-
-    // ------ sem regex ----------
-    // const words = inputValue.split(' ');
-    // for (const word of words) {
-    //     if (bannedWords.includes(word)) {
-    //         setError('Palavra imprópria encontrada. Por favor, revise o texto.');
-    //         return;
-    //     }
-    // }
-
-    // -------- com regex --------------
     const regex = new RegExp(bannedWords.join("|"), "i");
-        if (regex.test(inputValue)) {
-            setError('Palavra imprópria encontrada. Por favor, revise o texto.');
-            return;
-        }
+
+    if (regex.test(inputValue)) {
+      setError("Palavra imprópria encontrada. Por favor, revise o texto.");
+      return;
+    }
 
     await fetch(`${baseUrl}/video/comment`, {
       method: "POST",
       body: JSON.stringify({
-        videoId: "0e4678fc-6794-434f-907c-42b807846d80",
+        videoId: 1,
         text: inputValue,
       }),
       headers: { "Content-Type": "application/json" },
     });
 
-    setInputValue("")
-    setUpdate(oldValue => !oldValue)
+    setInputValue("");
+    setUpdate((oldValue) => !oldValue);
   };
 
   const getComments = async () => {
-    const response = await fetch(
-      `${baseUrl}/video`
-    );
+    const response = await fetch(`${baseUrl}/video`);
     const json: TypeResponse[] = await response.json();
     setData(json[0].comments);
   };
 
-  useEffect(()=>{ getComments() }, [])
-  useEffect(()=>{ getComments() }, [update])
+  useEffect(() => {
+    getComments();
+  }, []);
+  useEffect(() => {
+    getComments();
+  }, [update]);
 
   return (
     <S.Container>
@@ -100,21 +92,19 @@ export const BoxComments = () => {
           <button onClick={handleSubmit}>
             Send <i className="bx bxs-send"></i>
           </button>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
+          {error && <p style={{ color: "red" }}>{error}</p>}
         </S.Input>
       </S.BoxInput>
 
       <S.BoxComments>
         {data &&
-        data.map((item) => (
-          <Comment key={item.createdAt} text={item.text} />
-        ))}
+          data.map((item) => <Comment key={item.createdAt} text={item.text} />)}
       </S.BoxComments>
     </S.Container>
   );
 };
 
-const Comment = ({ text } ) => {
+const Comment = ({ text }) => {
   return (
     <S.Comment>
       <img src="./default_avatar.png" alt="" />
