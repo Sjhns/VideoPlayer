@@ -1,17 +1,17 @@
 import * as S from "./style";
 import { useEffect, useState } from "react";
-import {TypeComments, TypeResponse }from "./types"
+import { TypeComments, TypeResponse } from "./types";
 
 const bannedWords = ["lixo", "merda", "idiota"];
 
 export const BoxComments = () => {
-  const baseUrl = "https://api-video-streaming-production.up.railway.app/api/v1";
+  const baseUrl = process.env.NEXT_PUBLIC_URL_API;
 
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState<TypeComments[]>([]);
   const [update, setUpdate] = useState(false);
   const [error, setError] = useState("");
-
+  const [loading, setLoading] = useState(true);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInputValue(e.target.value);
@@ -19,8 +19,7 @@ export const BoxComments = () => {
   };
 
   const handleSubmit = async () => {
-
-    if(inputValue === ""){
+    if (inputValue === "") {
       setError("Digite um comentário antes de compartilhá-lo");
       return;
     }
@@ -51,10 +50,12 @@ export const BoxComments = () => {
   };
 
   useEffect(() => {
-    getComments();
+      getComments();
+      setLoading(false);
   }, []);
   useEffect(() => {
     getComments();
+    setLoading(false);
   }, [update]);
 
   return (
@@ -84,18 +85,24 @@ export const BoxComments = () => {
       </S.BoxInput>
 
       <S.BoxComments>
-        {data &&
-          data.map((item) => <Comment key={item.createdAt} text={item.text} />)}
+        {loading ? (
+          <S.Loading>
+            Carregando...
+          </S.Loading>
+        ) : (
+          data &&
+          data.map((item) => <Comment key={item.createdAt} text={item.text} />)
+        )}
       </S.BoxComments>
     </S.Container>
   );
 };
 
 const Comment = ({ text }) => {
-  const [like, setLike] = useState(false)
-  const toggleLike = () =>{
-    setLike(oldValue => !oldValue)
-  }
+  const [like, setLike] = useState(false);
+  const toggleLike = () => {
+    setLike((oldValue) => !oldValue);
+  };
 
   return (
     <S.Comment>
@@ -105,10 +112,11 @@ const Comment = ({ text }) => {
 
         <p>{text}</p>
         <S.CommentButtons>
-          {
-            like? <i className='bx bxs-like' onClick={toggleLike}></i> : <i className="bx bx-like" onClick={toggleLike}></i>
-          }
-          
+          {like ? (
+            <i className="bx bxs-like" onClick={toggleLike}></i>
+          ) : (
+            <i className="bx bx-like" onClick={toggleLike}></i>
+          )}
 
           <span>
             <i className="bx bxs-message-rounded-dots"></i>

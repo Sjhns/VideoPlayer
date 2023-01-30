@@ -103,6 +103,10 @@ export const Input = styled.div`
   }
 `;
 
+export const Loading = styled.h5`
+color: #c7c7c7;
+`
+
 export const BoxComments = styled.div`
   margin-top: 2.5rem;
 
