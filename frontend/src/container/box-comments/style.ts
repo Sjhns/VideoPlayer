@@ -105,6 +105,8 @@ export const Input = styled.div`
 
 export const Loading = styled.h5`
 color: #c7c7c7;
+font-size: 1.3rem;
+font-weight: 400;
 `
 
 export const BoxComments = styled.div`

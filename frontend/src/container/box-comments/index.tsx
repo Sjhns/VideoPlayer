@@ -46,15 +46,14 @@ export const BoxComments = () => {
     const response = await fetch(`${baseUrl}/video`);
     const json: TypeResponse[] = await response.json();
     setData(json[0].comments);
+    setLoading(false);
   };
 
   useEffect(() => {
       getComments();
-      setLoading(false);
   }, []);
   useEffect(() => {
     getComments();
-    setLoading(false);
   }, [update]);
 
   return (
