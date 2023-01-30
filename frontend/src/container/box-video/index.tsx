@@ -6,24 +6,22 @@ export const BoxVideo = () => {
     window.open("https://github.com/Sjhns");
   };
 
-  const [like, setLike] = useState(false)
-  const toggleLike = () =>{
-    setLike(oldValue => !oldValue)
-  }
+  const [like, setLike] = useState(false);
+  const toggleLike = () => {
+    setLike((oldValue) => !oldValue);
+  };
 
   return (
     <S.Container>
-      <video 
-      poster="./poster.png"
-        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-        controls
-      ></video>
+      <video poster="./poster.png" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls></video>
 
       <S.Bar>
         <div>
-          {
-            like? <i className='bx bxs-like' onClick={toggleLike}></i> : <i className="bx bx-like" onClick={toggleLike}></i>
-          }
+          {like ? (
+            <i className="bx bxs-like" onClick={toggleLike}></i>
+          ) : (
+            <i className="bx bx-like" onClick={toggleLike}></i>
+          )}
           985.5k
         </div>
         <div>
@@ -46,10 +44,7 @@ export const BoxVideo = () => {
       </S.Describe>
 
       <S.Channel>
-        <S.ChannelPhoto
-          src="https://avatars.githubusercontent.com/u/108435026?s=400&u=2583f1fb7c7e0cd027ac11c432159b05ef614a69&v=4"
-          alt=""
-        />
+        <S.ChannelPhoto src="./channel.jpg" />
         <div>
           <h2>
             Johnson
