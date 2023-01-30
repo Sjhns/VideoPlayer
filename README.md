@@ -16,7 +16,8 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 -   [PrismaORM](https://www.prisma.io)
 -   [Typescript](https://www.typescriptlang.org/)
 -   [Tsx](https://www.prisma.io)
-- [Cors](https://www.npmjs.com/package/cors)
+-   [Cors](https://www.npmjs.com/package/cors)
+-   [Planetscale](https://planetscale.com)
 
 </details>
 
