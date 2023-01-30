@@ -6,7 +6,6 @@ const bannedWords = ["lixo", "merda", "idiota"];
 
 export const BoxComments = () => {
   const baseUrl = process.env.NEXT_PUBLIC_URL_API;
-
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState<TypeComments[]>([]);
   const [update, setUpdate] = useState(false);
@@ -61,7 +60,7 @@ export const BoxComments = () => {
   return (
     <S.Container>
       <S.BoxTitle>
-        <h3>Comentários</h3>
+        <h3>Comentários · {data && data.length}</h3>
 
         <S.GroupButtons>
           <span>Best</span>
