@@ -2,7 +2,7 @@
 
 ## Acesse aqui
 
-### <video-streaming-pi.vercel.app>
+### [video-streaming-pi.vercel.app](video-streaming-pi.vercel.app)
 
 ## 🚀 Construído com
 
