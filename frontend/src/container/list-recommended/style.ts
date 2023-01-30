@@ -44,6 +44,8 @@ export const Item = styled.div`
   overflow: hidden;
   margin-bottom: 1.5rem;
   cursor: pointer;
+
+  
   
   &:hover{
     transform: scale(1.05);
@@ -90,3 +92,73 @@ export const VideoView = styled.div`
   color: #b9b8b8;
   font-size: 1rem;
 `;
+
+export const ContainerCardGithub = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`
+export const Card = styled.div`
+ -webkit-box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.7);
+
+  border: 1px solid #c7c7c727;
+  
+
+  border-radius: 1rem;
+
+  width: 19rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  flex-direction: column;  
+
+ padding: 2rem 0;
+
+ img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+
+  }
+`
+
+
+export const CardTitle = styled.h2`
+margin: 0;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+`
+
+export const CardDescribe = styled.p`
+margin-bottom: 3rem;
+    font-size: 1.25rem;
+    color: #b9b8b8;
+    text-align: center;
+    font-weight: 400;
+
+`
+
+
+export const CardButton = styled.button`
+  cursor: pointer;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    outline: none;
+    background: rgba(74, 111, 190, 0.795);
+    background: rgba(119, 13, 206, 0.795);
+    background: rgba(119, 13, 206, 0.795);
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+
+    &:hover {
+      background: rgba(108, 12, 187, 0.795);
+    }
+`
