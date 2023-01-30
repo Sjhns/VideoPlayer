@@ -1,8 +1,8 @@
 import * as S from "./style";
 
 export const BoxVideo = () => {
-  const handleLinkedin = () => {
-    window.open("https://www.linkedin.com/in/simeone-johnson/");
+  const handleGithub = () => {
+    window.open("https://github.com/Sjhns");
   };
 
   return (
@@ -52,7 +52,7 @@ export const BoxVideo = () => {
             </S.ChannelStats>
           </h2>
 
-          <S.Button onClick={handleLinkedin}>Follow</S.Button>
+          <S.Button onClick={handleGithub}>Follow</S.Button>
         </div>
       </S.Channel>
     </S.Container>
