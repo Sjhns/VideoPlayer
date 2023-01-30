@@ -122,6 +122,8 @@ export const Comment = styled.div`
   column-gap: 1rem;
   align-items: flex-start;
 
+  
+
   img {
     margin-top: 0.5rem;
     border-radius: 50%;
@@ -134,6 +136,15 @@ export const Comment = styled.div`
     font-weight: 500;
     font-size: 1.3rem;
     color: #efefef;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    justify-content: flex-start;
+
+    span{
+      color: #c7c7c7;
+      font-size: 1.5rem; 
+    }
 
   }
   p {
@@ -174,3 +185,7 @@ export const CommentButtons = styled.div`
     }
   }
 `;
+
+export const Time = styled.p`
+font-size: 1rem !important;
+`

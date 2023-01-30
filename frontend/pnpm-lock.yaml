@@ -7,6 +7,7 @@ specifiers:
   '@types/react-dom': ^18.0.5
   '@types/styled-components': ^5.1.25
   dotenv: ^16.0.3
+  moment: ^2.29.4
   next: latest
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -16,6 +17,7 @@ specifiers:
 dependencies:
   '@next/font': 13.1.5
   dotenv: 16.0.3
+  moment: 2.29.4
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -499,6 +501,10 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
+    dev: false
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: false
 
   /ms/2.1.2:

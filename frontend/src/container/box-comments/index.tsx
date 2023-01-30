@@ -1,11 +1,12 @@
 import * as S from "./style";
 import { useEffect, useState } from "react";
 import { TypeComments, TypeResponse } from "./types";
-
-const bannedWords = ["lixo", "merda", "idiota"];
+import { Comment } from "./Comment";
 
 export const BoxComments = () => {
+  const bannedWords = ["lixo", "merda", "idiota"];
   const baseUrl = process.env.NEXT_PUBLIC_URL_API;
+
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState<TypeComments[]>([]);
   const [update, setUpdate] = useState(false);
@@ -50,7 +51,7 @@ export const BoxComments = () => {
   };
 
   useEffect(() => {
-      getComments();
+    getComments();
   }, []);
   useEffect(() => {
     getComments();
@@ -84,44 +85,12 @@ export const BoxComments = () => {
 
       <S.BoxComments>
         {loading ? (
-          <S.Loading>
-            Carregando...
-          </S.Loading>
+          <S.Loading>Carregando...</S.Loading>
         ) : (
           data &&
-          data.map((item) => <Comment key={item.createdAt} text={item.text} />)
+          data.map((item) => <Comment key={item.createdAt} text={item.text} createdAt={item.createdAt} />)
         )}
       </S.BoxComments>
     </S.Container>
-  );
-};
-
-const Comment = ({ text }) => {
-  const [like, setLike] = useState(false);
-  const toggleLike = () => {
-    setLike((oldValue) => !oldValue);
-  };
-
-  return (
-    <S.Comment>
-      <img src="./default_avatar.png" alt="" />
-      <div>
-        <h3>Anônimo</h3>
-
-        <p>{text}</p>
-        <S.CommentButtons>
-          {like ? (
-            <i className="bx bxs-like" onClick={toggleLike}></i>
-          ) : (
-            <i className="bx bx-like" onClick={toggleLike}></i>
-          )}
-
-          <span>
-            <i className="bx bxs-message-rounded-dots"></i>
-            Responder
-          </span>
-        </S.CommentButtons>
-      </div>
-    </S.Comment>
   );
 };
