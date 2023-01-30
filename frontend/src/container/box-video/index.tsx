@@ -1,9 +1,15 @@
+import { useState } from "react";
 import * as S from "./style";
 
 export const BoxVideo = () => {
   const handleGithub = () => {
     window.open("https://github.com/Sjhns");
   };
+
+  const [like, setLike] = useState(false)
+  const toggleLike = () =>{
+    setLike(oldValue => !oldValue)
+  }
 
   return (
     <S.Container>
@@ -15,7 +21,9 @@ export const BoxVideo = () => {
 
       <S.Bar>
         <div>
-          <i className="bx bx-like"></i>
+          {
+            like? <i className='bx bxs-like' onClick={toggleLike}></i> : <i className="bx bx-like" onClick={toggleLike}></i>
+          }
           985.5k
         </div>
         <div>

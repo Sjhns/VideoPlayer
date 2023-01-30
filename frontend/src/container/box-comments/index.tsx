@@ -87,6 +87,11 @@ export const BoxComments = () => {
 };
 
 const Comment = ({ text }) => {
+  const [like, setLike] = useState(false)
+  const toggleLike = () =>{
+    setLike(oldValue => !oldValue)
+  }
+
   return (
     <S.Comment>
       <img src="./default_avatar.png" alt="" />
@@ -95,7 +100,10 @@ const Comment = ({ text }) => {
 
         <p>{text}</p>
         <S.CommentButtons>
-          <i className="bx bx-like"></i>
+          {
+            like? <i className='bx bxs-like' onClick={toggleLike}></i> : <i className="bx bx-like" onClick={toggleLike}></i>
+          }
+          
 
           <span>
             <i className="bx bxs-message-rounded-dots"></i>
