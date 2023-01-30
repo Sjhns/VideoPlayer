@@ -4,11 +4,7 @@
 
 ### <video-streaming-pi.vercel.app>
 
-<br>
-
------
-
-### 🚀 Construído com
+## 🚀 Construído com
 
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -34,20 +30,18 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 </details>
 
-<br>
+## Começando
 
-### Começando
-
-#### Clone o repositório
+### Clone o repositório
 
 ```shell
 git clone https://github.com/Sjhns/video-streaming.git
 cd video-streaming
 ```
 
-##### Backend
+### Backend
 
-##### Instale as dependências
+#### Instale as dependências
 
 ```bash
 npm install // Se tiver o npm
@@ -57,7 +51,7 @@ yarn // Se tiver o yarn
 pnpm i // Se tiver o pnpm
 ```
 
-##### Execute o servidor
+#### Execute o servidor
 
 ```
 npm run dev // Se tiver o npm
@@ -67,9 +61,9 @@ yarn dev // Se tiver o yarn
 pnpm dev // Se tiver o pnpm
 ```
 
-##### Frontend
+### Frontend
 
-##### Instale as dependências
+#### Instale as dependências
 
 ```bash
 npm install // Se tiver o npm
@@ -79,7 +73,7 @@ yarn // Se tiver o yarn
 pnpm i // Se tiver o pnpm
 ```
 
-##### Execute o servidor
+#### Execute o servidor
 
 ```
 npm run dev // Se tiver o npm
