@@ -20,6 +20,11 @@ export const BoxComments = () => {
 
   const handleSubmit = async () => {
 
+    if(inputValue === ""){
+      setError("Digite um comentário antes de compartilhá-lo");
+      return;
+    }
+
     const regex = new RegExp(bannedWords.join("|"), "i");
     if (regex.test(inputValue)) {
       setError("Palavra imprópria encontrada. Por favor, revise o texto.");
