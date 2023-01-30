@@ -63,8 +63,8 @@ export const BoxComments = () => {
         <h3>Comentários · {data && data.length}</h3>
 
         <S.GroupButtons>
-          <span>Best</span>
-          <span>Recent</span>
+          <span>melhores</span>
+          <span>recentes</span>
         </S.GroupButtons>
       </S.BoxTitle>
 
@@ -77,7 +77,7 @@ export const BoxComments = () => {
             placeholder="Adicione um comentário..."
           ></textarea>
           <button onClick={handleSubmit}>
-            Send <i className="bx bxs-send"></i>
+            enviar <i className="bx bxs-send"></i>
           </button>
           {error && <p style={{ color: "red" }}>{error}</p>}
         </S.Input>

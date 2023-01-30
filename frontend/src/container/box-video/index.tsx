@@ -28,7 +28,7 @@ export const BoxVideo = () => {
         </div>
         <div>
           <i className="bx bx-bookmark-plus"></i>
-          My list
+          Minha lista
         </div>
 
         <div>
@@ -54,13 +54,13 @@ export const BoxVideo = () => {
           <h2>
             Johnson
             <S.ChannelStats>
-              <span>2.5M Followers</span>
+              <span>2.5M Seguidores</span>
               <span className="ponto">•</span>
               <span>1,589 Videos</span>
             </S.ChannelStats>
           </h2>
 
-          <S.Button onClick={handleGithub}>Follow</S.Button>
+          <S.Button onClick={handleGithub}>Seguir</S.Button>
         </div>
       </S.Channel>
     </S.Container>
