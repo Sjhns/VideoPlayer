@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { BoxVideo } from "../container/box-video";
 import { BoxComments } from "../container/box-comments";
 import { ListRecommended } from "../container/list-recommended";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 export default function Home() {
   return (

@@ -5,7 +5,7 @@ import {TypeComments, TypeResponse }from "./types"
 const bannedWords = ["lixo", "merda", "idiota"];
 
 export const BoxComments = () => {
-  const baseUrl = "https://api-video-streaming-production.up.railway.app/api/v1";
+  const baseUrl = process.env.URL_API;
 
   const [inputValue, setInputValue] = useState("");
   const [data, setData] = useState<TypeComments[]>([]);
