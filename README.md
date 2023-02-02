@@ -2,7 +2,7 @@
 
 ## Acesse aqui
 
-### [video-streaming-v1.vercel.app](https://video-streaming-v1.vercel.app)
+### [video-player-v1.vercel.app](https://video-player-v1.vercel.app)
 
 ## 🚀 Construído com
 
