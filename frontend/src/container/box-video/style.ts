@@ -141,6 +141,6 @@ export const Button = styled.button`
   }
 
   @media (max-width: 357px) {
-    margin-left: 2rem;
+    margin-left: 1.6rem;
   }
 `;
