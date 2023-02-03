@@ -113,7 +113,7 @@ export const ChannelPhoto = styled.img`
 
 export const ChannelStats = styled.div`
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .7rem;
   color: #b9b8b8;
   text-transform: capitalize;
   white-space: nowrap;
@@ -123,14 +123,6 @@ export const ChannelStats = styled.div`
   }
 `;
 
-export const BoxChannnelButton = styled.div`
-@media (max-width: 357px) {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0  .7rem 0 0;
-}
-`
 
 export const Button = styled.button`
   margin-left: 5rem;
