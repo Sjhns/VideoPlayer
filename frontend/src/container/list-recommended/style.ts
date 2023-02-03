@@ -97,6 +97,7 @@ export const ContainerCardGithub = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+  display: none;
 `
 export const Card = styled.div`
  -webkit-box-shadow: 1px 3px 7px 1px rgba(0, 0, 0, 0.7);
