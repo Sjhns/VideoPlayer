@@ -113,7 +113,7 @@ export const ChannelPhoto = styled.img`
 
 export const ChannelStats = styled.div`
   font-weight: 400;
-  font-size: .9rem;
+  font-size: .94rem;
   color: #b9b8b8;
   text-transform: capitalize;
   white-space: nowrap;
