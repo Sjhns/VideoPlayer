@@ -49,9 +49,9 @@ export const BoxVideo = () => {
           <h2>
             Johnson
             <S.ChannelStats>
-              <span>2.5M Seguidores</span>
+              <span>2.5M seguidores</span>
               <span className="ponto">•</span>
-              <span>1,589 Videos</span>
+              <span>1.689 videos</span>
             </S.ChannelStats>
           </h2>
 
