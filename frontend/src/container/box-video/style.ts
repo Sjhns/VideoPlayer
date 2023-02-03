@@ -100,6 +100,7 @@ export const Channel = styled.div`
 
   @media (max-width: 578px) {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -122,6 +123,15 @@ export const ChannelStats = styled.div`
   }
 `;
 
+export const BoxChannnelButton = styled.div`
+@media (max-width: 357px) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0  .7rem 0 0;
+}
+`
+
 export const Button = styled.button`
   margin-left: 5rem;
 
@@ -141,6 +151,6 @@ export const Button = styled.button`
   }
 
   @media (max-width: 357px) {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
 `;
