@@ -115,7 +115,7 @@ export const ChannelStats = styled.div`
   font-weight: 400;
   font-size: .94rem;
   color: #b9b8b8;
-  text-transform: uppercase;
+  text-transform: lowercase;
   white-space: nowrap;
   .ponto {
     margin-left: 0.5rem;
