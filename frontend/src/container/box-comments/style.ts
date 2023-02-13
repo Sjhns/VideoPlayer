@@ -70,7 +70,7 @@ export const Input = styled.div`
     border: none;
     background: #2c2c2c94;
     color: #cfcfcf;
-
+    resize: none;
     font-size: 1.5rem;
 
   }
