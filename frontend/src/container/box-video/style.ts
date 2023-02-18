@@ -100,6 +100,7 @@ export const Channel = styled.div`
 
   @media (max-width: 578px) {
     padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 
@@ -112,15 +113,16 @@ export const ChannelPhoto = styled.img`
 
 export const ChannelStats = styled.div`
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .94rem;
   color: #b9b8b8;
-  text-transform: capitalize;
+  text-transform: initial;
   white-space: nowrap;
   .ponto {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
 `;
+
 
 export const Button = styled.button`
   margin-left: 5rem;
