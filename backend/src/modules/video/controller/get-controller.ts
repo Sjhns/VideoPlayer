@@ -7,7 +7,7 @@ export class GetController {
 
     const video = await prismaClient.video.findFirst({
         where: {
-          id: id,
+          id: parseInt(id),
         },
         include: {
           comments: {
